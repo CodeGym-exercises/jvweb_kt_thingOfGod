@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CreatePage</title>
+</head>
+<body>
+    <form th:action="@{/thing}" method="post" th:object="${thing}">
+        <label for="name">Name: </label>
+        <input type="text" th:fields="*{name}" id="name"><br>
+        <label for="description">Description: </label>
+        <input type="text" th:fields="*{description}" id="description"><br>
+        <input type="button" value="submit">
+    </form>
+</body>
+</html>
